@@ -19,7 +19,7 @@ use SebastianBergmann\CodeCoverage\RuntimeException;
 final class Clover
 {
     /**
-     * @throws \RuntimeException
+     * @throws RuntimeException
      */
     public function process(CodeCoverage $coverage, ?string $target = null, ?string $name = null): string
     {
@@ -235,7 +235,7 @@ final class Clover
 
         if ($target !== null) {
             if (!$this->createDirectory(\dirname($target))) {
-                throw new \RuntimeException(\sprintf('Directory "%s" was not created', \dirname($target)));
+                throw new RuntimeException(\sprintf('Directory "%s" was not created', \dirname($target)));
             }
 
             if (@\file_put_contents($target, $buffer) === false) {
